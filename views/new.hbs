@@ -1,0 +1,28 @@
+<h1>Add New Food!</h1>
+
+{{#if errors}}
+<ul>
+    {{#each errors}}
+    <li style="color: red;">{{this}}</li>
+    {{/each}}
+</ul>
+{{/if}}
+
+<form action="/food" method="POST">
+    <div>
+        <label for="name">Food Name:</label>
+        <input type="text" name="food[name]" id="name" value="{{food.name}}">
+    </div>
+
+    <div>
+        <label for="type">Type:</label>
+        <input type="text" name="food[type]" id="type" value="{{food.type}}">
+    </div>
+
+    <div>
+        <label for="description">Description</label>
+        <textarea name="food[description]" id="description">{{food.description}}</textarea>
+    </div>
+
+    <input type="submit" value="Add Food">
+</form>

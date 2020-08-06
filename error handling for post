@@ -1,0 +1,9 @@
+const errors = []
+  if (!name || name.trim() === "") {
+    errors.push("Food Name can't be blank!")
+  }
+  if (!type || type.trim() === "") {
+    errors.push("Type can't be blank!")
+  }
+
+  if (errors.length === 0) {
